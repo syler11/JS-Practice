@@ -1,9 +1,10 @@
-
+let words = ['apple', 'call', 'test','smile'];
 
 function addWords() {
     let newWord = words.map(word => `<li>${word}</li>`).join('\n');
     document.getElementById('easy').innerHTML = newWord;
 }
+
 
 
 let btnAdd = document.getElementById('btnAdd');
@@ -26,7 +27,7 @@ btnDelete.addEventListener('click', () =>{
     addWords();
 });
 
-let words = ['apple', 'call', 'test','smile'];
+
 
 addWords();
 
