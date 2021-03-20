@@ -3,7 +3,7 @@ let words = ['apple', 'call', 'test','smile'];
 function addWords() {
     let newWord = words.map(word => `<li>${word}</li>`).join('\n');
     document.getElementById('easy').innerHTML = newWord;
-    
+    sortWords();
    
 }
 
@@ -21,18 +21,20 @@ btnAdd.addEventListener('click', () =>{
 });
 
 
-
-
-
 addWords();
 
-word_four = [];
+
+
+
+
+function sortWords() {
+    word_four = [];
 for(var i=0; i<words.length; i++){
     if(words[i].length == 4) 
         word_four.push(words[i]);
 }
 
-document.getElementById('medium').innerHTML = (word_four).join("<br/>");
+document.getElementById('easy').innerHTML = (word_four).join("<br/>");
 
 word_five = [];
 for(var i=0; i<words.length; i++){
@@ -40,5 +42,27 @@ for(var i=0; i<words.length; i++){
         word_five.push(words[i]);
 }
 
-document.getElementById('hard').innerHTML = (word_five).join("<br/>");
+document.getElementById('medium').innerHTML = (word_five).join("<br/>");
+
+word_six = [];
+for(var i=0; i<words.length; i++){
+    if(words[i].length == 6) 
+        word_six.push(words[i]);
+}
+
+document.getElementById('hard').innerHTML = (word_six).join("<br/>");
+}
+
+function removeWord() {
+    let input = document.querySelector('#deleteWord').value;
+    index = words.indexOf(input);
+    if (index >= 0) {
+    words.splice(index, 1);
+    sortWords();
+    document.getElementById('deleteWord').value = "";
+    alert("The word " + input + " was deleted.")
+    } else {
+    alert("The word " + input + " is not in the database.")
+    }
+}
 
