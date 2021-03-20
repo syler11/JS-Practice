@@ -7,40 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-6" text-center>
-                    <input id="inputWord" type="text" placeholder="type the word">
-                    <button id="btnAdd">Add</button>
-                </div>
-                <div class="col-6" text-center>
-                    <input id="deleteWord" type="text" placeholder="type the word">
-                    <button id="btnDelete" onclick="removeWord()">Delete</button>
-                </div>
-    <div class="col-4 text center">
-        <p class="word-column">4 letter words</p>
-        <ul id="easy"></ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-6" text-center>
+                <input id="inputWord" type="text" placeholder="type the word">
+                <button id="btnAdd">Add</button>
+            </div>
+            <div class="col-6" text-center>
+                <input id="deleteWord" type="text" placeholder="type the word">
+                <button id="btnDelete" onclick="removeWord()">Delete</button>
+            </div>
+            <div class="col-4 text center">
+                <p class="word-column">4 letter words</p>
+                <ul id="easy"></ul>
+            </div>
+            <div class="col-4 text center">
+                <p class="word-column">5 letter words</p>
+                <ul id="medium"></ul>
+            </div>
+            <div class="col-4 text center">
+                <p class="word-column ">6 letter words</p>
+                <ul id="hard"></ul>
+            </div>
+        </div>
     </div>
-    <div class="col-4 text center">
-        <p class="word-column">5 letter words</p>
-        <ul id="medium"></ul>
-    </div>
-    <div class="col-4 text center">
-        <p class="word-column ">6 letter words</p>
-        <ul id="hard"></ul>
-    </div>
-    </div>
-    </div>
-    <div>
-        <span id="word1">Word1</span>
-        <span id="word2">Word2</span>
-        <span id="word3">Word3</span>
-        <span id="word4">Word4</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <span id="word1">Word1</span>
+                <span id="word2">Word2</span>
+                <span id="word3">Word3</span>
+                <span id="word4">Word4</span>
+            </div>
+            <div><button id="nextOne" onclick="randomWord()">Next word</button></div>
+            <div>
+                <p><i id="picture" class="fas"></i></p>
+            </div>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>

@@ -12,6 +12,9 @@ li {
     list-style: none;
 }
 
-.fa-smile {
-    font-size: 40px;
+
+#picture {
+    font-size: 100px;
+    color: #f12c2c;
+    padding:20px;
 }

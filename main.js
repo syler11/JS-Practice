@@ -1,4 +1,4 @@
-let words = ['apple', 'call', 'test','smile'];
+let words = ['shower', 'frog', 'fire','smile', 'phone', 'horse'];
 
 function addWords() {
     let newWord = words.map(word => `<li>${word}</li>`).join('\n');
@@ -74,4 +74,4 @@ function randomWord() {
 
 randomWord();
 
-document.getElementById("word1").classList.add('fa-'+randWord);
+document.querySelector("#picture").classList.add('fa-'+randWord);
