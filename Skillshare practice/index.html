@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Skillshare practice</title>
+</head>
+<body>
+    <div class="main">
+        <h3 id="newTitle">[Title here]</h3>
+        <p id="shortContent">West Highland Way is 95 miles long walking path on the West Coast...</p>
+        <button class="btn" onclick="openModal()">Read more</button>
+    </div>
+    <div class="modal-container">
+        <div class="modal-title">West Highland Way</div>
+        <div class="modal-content">The West Highland Way. (Scottish Gaelic: Slighe na Gàidhealtachd an Iar) is a linear long-distance route in Scotland. 
+            It is 154 km (96 miles) long, running from Milngavie north of Glasgow to Fort William in the Scottish Highlands, 
+            with an element of hill walking in the route. The trail, which opened in 1980, 
+            was Scotland's first officially designated Long Distance Route, and is now designated by NatureScot 
+            as one of Scotland's Great Trails. It is primarily intended as a long distance walking route, 
+            and whilst many sections are suitable for mountain biking and horseriding there are obstacles 
+            and surfaces that will require these users to dismount in places.</div>
+        <div class="modal-footer">
+            <button type="button" class="btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <div>
+        <input type="number" id="num1" class="input-box">
+        <select>
+            <option class="operator" id="addition" value="addition">+</option>
+            <option class="operator" id="substract" value="substract">-</option>
+            <option class="operator" id="divide" value="divide">/</option>
+            <option class="operator" id="multiply" value="multiply">*</option>
+        </select>
+        <input type="number" id="num2" class="input-box">
+        <button type="button" onclick="calculation()">Calculate</button>
+    </div>
+    <div id="answer-box"></div>
+    <script src="main.js"></script>
+</body>
