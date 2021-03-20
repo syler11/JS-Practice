@@ -66,3 +66,12 @@ function removeWord() {
     }
 }
 
+function randomWord() {
+   let randNum = Math.floor((Math.random())*words.length);
+   randWord = words[randNum];
+   document.getElementById('word1').innerHTML = randWord;
+}
+
+randomWord();
+
+document.getElementById("word1").classList.add('fa-'+randWord);
